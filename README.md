@@ -16,7 +16,12 @@ FileStream Class
 ------------------------------------
 
 - FileStream(String, FileMode, FileAccess) 
-        Initializes a new instance of the FileStream class with the specified path, creation mode, and read/write permission.
+        Initializes a new instance of the FileStream class with the specified path, creation mode, and read/write permission
+        
+- FileMode: Append, Create, CreateNew, Open, OpenOrCreate, Truncate
+
+- FileAccess: Read, Write, ReadWrite
+
         
 StreamWriter Class 
 ------------------------------------
@@ -24,12 +29,15 @@ StreamWriter Class
 - StreamWriter(Stream) 
         Initializes a new instance of the StreamWriter class for the specified stream by using UTF-8 encoding and the default buffer size.
         
+- Write (<all intrinsic types>), WriteLine (<all intrinsic types>), Flush, Close
+        
 StreamReader Class 
 ------------------------------------
 
 -StreamReader(Stream) 
         Initializes a new instance of the StreamReader class for the specified stream.
-        
+  
+- Read(), Read(char[]), ReadLine, ReadToEnd
 
         ex)
         string path = @"c:\temp\MyTest.txt";
@@ -48,11 +56,16 @@ StreamReader Class
                 }
         }
 
-BinaryWriter Class 
+BinaryWriter & BinaryReader Class 
 --------------------
 
-- 
+- binary files store the binary image of actual data values instead of storing data as a sequence of characters
 
+*  a 32 bit integer occupies four bytes 
+
+*  used to work with fixed length records to facilitate easy position based access
+        wr.Write (name.PadRight(LENGTH).ToCharArray(0, LENGTH)); 
+        string name = new String(binaryReader.ReadChars(50));
 
 
 
