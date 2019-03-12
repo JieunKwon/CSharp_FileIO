@@ -64,8 +64,10 @@ BinaryWriter & BinaryReader Class
 *  a 32 bit integer occupies four bytes 
 
 *  used to work with fixed length records to facilitate easy position based access
-        wr.Write (name.PadRight(LENGTH).ToCharArray(0, LENGTH)); 
-        string name = new String(binaryReader.ReadChars(50));
+
+wr.Write (name.PadRight(LENGTH).ToCharArray(0, LENGTH)); 
+
+string name = new String(binaryReader.ReadChars(50));
 
 
 
