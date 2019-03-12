@@ -31,10 +31,11 @@ StreamWriter Class
         
 - Write (<all intrinsic types>), WriteLine (<all intrinsic types>), Flush, Close
         
+        
 StreamReader Class 
 ------------------------------------
 
--StreamReader(Stream) 
+- StreamReader(Stream) 
         Initializes a new instance of the StreamReader class for the specified stream.
   
 - Read(), Read(char[]), ReadLine, ReadToEnd
@@ -61,13 +62,13 @@ BinaryWriter & BinaryReader Class
 
 - binary files store the binary image of actual data values instead of storing data as a sequence of characters
 
-*  a 32 bit integer occupies four bytes 
+-  a 32 bit integer occupies four bytes 
 
-*  used to work with fixed length records to facilitate easy position based access
+-  used to work with fixed length records to facilitate easy position based access
 
-wr.Write (name.PadRight(LENGTH).ToCharArray(0, LENGTH)); 
+   wr.Write (name.PadRight(LENGTH).ToCharArray(0, LENGTH)); 
 
-string name = new String(binaryReader.ReadChars(50));
+   string name = new String(binaryReader.ReadChars(50));
 
 
 
