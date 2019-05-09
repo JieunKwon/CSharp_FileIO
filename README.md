@@ -66,7 +66,7 @@ BinaryWriter & BinaryReader Class
 
 -  used to work with fixed length records to facilitate easy position based access
 
-   wr.Write (name.PadRight(LENGTH).ToCharArray(0, LENGTH)); 
+   writer.Write (name.PadRight(LENGTH).ToCharArray(0, LENGTH)); 
 
    string name = new String(binaryReader.ReadChars(50));
 
